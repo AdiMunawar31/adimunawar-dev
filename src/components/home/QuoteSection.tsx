@@ -36,9 +36,9 @@ export function QuoteSection() {
           viewport={{ once: true }}
           className="italic max-w-3xl mx-auto mt-8 text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-300"
         >
-          "Great design is not just about aesthetics, but about creating an
+          {` "Great design is not just about aesthetics, but about creating an
           experience that resonates with people’s emotions, inspires action, and
-          stands the test of time."
+          stands the test of time."`}
         </motion.p>
 
         {/* Profile */}

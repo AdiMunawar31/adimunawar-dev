@@ -1,10 +1,9 @@
 "use client";
 
 import { experiences } from "@/lib/data/experiences";
+import { motion } from "framer-motion";
 import { ExperienceCard } from "../customs/ExperienceCard";
 import Section from "../layouts/Section";
-import { D2YTag } from "../base/D2YTag";
-import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },

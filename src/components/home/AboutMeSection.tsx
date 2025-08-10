@@ -1,11 +1,8 @@
-// src/components/sections/AboutMeSection.tsx
-
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "../layouts/Section";
-import { D2YTag } from "../base/D2YTag";
-import { motion } from "framer-motion";
 
 export function AboutMeSection() {
   return (
@@ -44,7 +41,7 @@ export function AboutMeSection() {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* LEFT: Profile Image */}
         <motion.div
-          className="relative w-fit mx-auto mr-52 -mt-8"
+          className="relative w-fit mx-auto mr-52 -mt-24"
           initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -77,28 +74,41 @@ export function AboutMeSection() {
             style={{ fontFamily: "var(--font-open-sans)" }}
           >
             <p>
-              I'm a passionate,{" "}
-              <a
-                href="#"
-                className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition"
-              >
-                self-proclaimed designer
-              </a>{" "}
-              who specializes in full stack development (React.js & Node.js)...
+              I am a highly driven{" "}
+              <span className="font-semibold">
+                Fullstack Web & Mobile Developer
+              </span>{" "}
+              specializing in modern technologies such as{" "}
+              <span className="font-medium">React.js, Next.js, Node.js</span>{" "}
+              for web, and <span className="font-medium">Flutter</span> for
+              cross-platform mobile applications. With more than 7 years of
+              professional experience, I focus on building fast, accessible, and
+              user-centric digital solutions that merge performance with
+              exceptional design.
             </p>
-            <p>I began my journey as a web developer in 2015...</p>
-            <p>I am very much a progressive thinker...</p>
-            <p>When I'm not in full-on developer mode...</p>
-            <p className="font-medium">Finally, some quick bits about me.</p>
+
+            <p>
+              My journey in software development started in 2015, driven by
+              curiosity and the desire to create products that solve real-world
+              problems. Since then, I’ve collaborated with startups,
+              enterprises, and agencies, delivering projects that range from{" "}
+              <span className="italic">scalable enterprise platforms</span> to{" "}
+              <span className="italic">sleek, modern mobile apps</span>.
+            </p>
+
+            <p className="font-medium">Some quick facts about me:</p>
             <ul className="list-disc list-inside grid grid-cols-2 gap-x-8 gap-y-1">
               <li>B.E. in Computer Engineering</li>
-              <li>Avid learner</li>
-              <li>Full time freelancer</li>
-              <li>Aspiring indie hacker</li>
+              <li>7+ years of development experience</li>
+              <li>Specialist in Web & Mobile Apps</li>
+              <li>Strong UI/UX design sense</li>
             </ul>
+
             <p>
-              One last thing, I'm available for freelance work...{" "}
-              <span className="inline-block">😊</span>
+              I am currently{" "}
+              <span className="font-semibold text-green-600">open</span> for
+              freelance and collaboration opportunities — let’s build something
+              impactful together! <span className="inline-block">🚀</span>
             </p>
           </div>
         </motion.div>

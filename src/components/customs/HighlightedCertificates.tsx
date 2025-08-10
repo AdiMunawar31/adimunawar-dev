@@ -1,21 +1,19 @@
 "use client";
 
-import { useState, useRef } from "react";
-import Image from "next/image";
 import { highlightedCertificates } from "@/lib/data/certificates";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function CertificateCarousel() {
   const [current, setCurrent] = useState(0);
   const total = highlightedCertificates.length;
 
-  // Ref & observer untuk trigger animasi saat di-scroll
-  const containerRef = useRef(null);
   const { ref, inView } = useInView({
-    threshold: 0.2, // Trigger ketika 20% elemen terlihat
-    triggerOnce: true, // Animasi hanya sekali
+    threshold: 0.2,
+    triggerOnce: true,
   });
 
   const handleNext = () => {

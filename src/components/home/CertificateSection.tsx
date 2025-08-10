@@ -1,10 +1,9 @@
 "use client";
 
-import { D2YTag } from "../base/D2YTag";
+import { motion } from "framer-motion";
 import { CertificatesMarquee } from "../customs/CertificatesMarquee";
 import HighlightedCertificatesSwiper from "../customs/HighlightedCertificates";
 import Section from "../layouts/Section";
-import { motion } from "framer-motion";
 
 export const CertificateSection = () => {
   return (

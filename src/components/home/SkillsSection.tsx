@@ -1,30 +1,9 @@
 "use client";
 
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Section from "../layouts/Section";
-import { D2YTag } from "../base/D2YTag";
-import { motion, Variants } from "framer-motion";
-
-const skills = [
-  { name: "Javascript", icon: "/icons/js.svg" },
-  { name: "Typescript", icon: "/icons/ts.svg" },
-  { name: "React", icon: "/icons/react.svg" },
-  { name: "Next.js", icon: "/icons/nextjs.svg" },
-  { name: "Node.js", icon: "/icons/node.svg" },
-  { name: "Nest.js", icon: "/icons/nest.svg" },
-  { name: "PHP", icon: "/icons/php.svg" },
-  { name: "Laravel", icon: "/icons/lara.svg" },
-  { name: "Flutter", icon: "/icons/flutter.svg" },
-  { name: "Dart", icon: "/icons/dart.svg" },
-  { name: "PostgreSQL", icon: "/icons/postgres.svg" },
-  { name: "MongoDB", icon: "/icons/MongoDB.svg" },
-  { name: "Tailwindcss", icon: "/icons/tail.svg" },
-  { name: "Figma", icon: "/icons/figma.svg" },
-  { name: "Vue.js", icon: "/icons/vue.png" },
-  { name: "Framer Motion", icon: "/icons/framer-motion.png" },
-  { name: "Git", icon: "/icons/git.svg" },
-  { name: "Docker", icon: "/icons/Docker.svg" },
-];
+import { skills } from "@/lib/data/skills";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

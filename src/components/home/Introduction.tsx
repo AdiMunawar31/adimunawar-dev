@@ -14,7 +14,7 @@ export default function Introduction() {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     let iteration = 0;
     const interval = setInterval(() => {
-      setScrambledName((prev) =>
+      setScrambledName(() =>
         targetName
           .split("")
           .map((char, i) => {
@@ -25,10 +25,10 @@ export default function Introduction() {
           .join("")
       );
 
-      iteration += 1 / 2; // kecepatan scramble
+      iteration += 1 / 2;
       if (iteration >= targetName.length) {
         clearInterval(interval);
-        setScrambledName(targetName); // pastikan nama asli muncul penuh
+        setScrambledName(targetName);
       }
     }, 50);
 
@@ -37,7 +37,7 @@ export default function Introduction() {
 
   return (
     <Section>
-      <div className="grid ml-8 md:grid-cols-2 gap-10 items-center py-20">
+      <div className="grid ml-8 md:grid-cols-2 gap-10 items-center py-8">
         {/* Text Content */}
         <div className="space-y-6">
           {/* Nama dengan animasi scramble */}
@@ -61,11 +61,19 @@ export default function Introduction() {
             className="text-neutral-800 text-lg leading-relaxed"
             style={{ fontFamily: "var(--font-open-sans)" }}
           >
-            I'm a full stack developer (React.js & Node.js) with a focus on
-            creating (and occasionally designing) exceptional digital
-            experiences that are fast, accessible, visually appealing, and
-            responsive. Even though I have been creating web applications for
-            over 7 years, I still love it as if it was something new.
+            I am a dedicated{" "}
+            <span className="font-semibold">
+              Fullstack Web & Mobile Developer
+            </span>{" "}
+            specializing in
+            <span className="font-medium"> React.js, Next.js, Node.js</span> for
+            the web and
+            <span className="font-medium"> Flutter</span> for cross-platform
+            mobile applications. I focus on crafting fast, accessible, and
+            visually engaging digital experiences with a strong emphasis on
+            clean architecture and maintainable code. With over 2 years of
+            experience delivering high-quality products for startups,
+            enterprises, and agencies.
           </motion.p>
 
           {/* Location & Availability */}

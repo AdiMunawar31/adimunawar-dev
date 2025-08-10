@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import PageTransition from "@/components/customs/PageTransition";
 import { Footer } from "@/components/layouts/Footer";
 import { Header } from "@/components/layouts/Header";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme.provider";
-import { Raleway, Oswald, Open_Sans } from "next/font/google";
-import PageTransition from "@/components/customs/PageTransition";
+import { Open_Sans, Raleway } from "next/font/google";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const raleway = Raleway({
   weight: "700",
