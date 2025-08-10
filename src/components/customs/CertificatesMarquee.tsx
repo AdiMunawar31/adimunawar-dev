@@ -10,20 +10,29 @@ export const CertificatesMarquee = () => {
   const secondRow = certificateList.slice(half);
 
   return (
-    <div className="space-y-10 py-10 mt-24 -mx-60 relative">
-      {/* Fade Mask Samping */}
-      {/* <div className="pointer-events-none absolute inset-0 z-10 flex justify-between items-center">
-        <div className="w-20 h-full bg-gradient-to-r from-muted via-muted to-transparent" />
-        <div className="w-20 h-full bg-gradient-to-l from-muted via-muted to-transparent" />
-      </div> */}
+    <div className="space-y-10 py-10 mt-24 -mx-60 relative overflow-hidden">
+      {/* Kotak-kotak background */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `
+          linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px)
+        `,
+          backgroundSize: "100px 100px",
+        }}
+      />
+
+      {/* Overlay gradasi atas & bawah */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-white/80 via-transparent to-white/80 dark:from-[#0a0a0a]/80 dark:via-transparent dark:to-[#0a0a0a]/80" />
 
       {/* Row 1 - Left to Right */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden z-20">
         <Marquee speed={35} pauseOnHover>
           {firstRow.map((cert, idx) => (
             <div
               key={`cert-1-${idx}`}
-              className="group mx-2 relative w-[300px] h-[210px] rounded-md overflow-hidden border shadow-md"
+              className="group mx-2 relative w-[200px] sm:w-[300px] h-[140px] sm:h-[210px] rounded-md overflow-hidden border shadow-md"
             >
               <Image
                 src={cert.src}
@@ -47,12 +56,12 @@ export const CertificatesMarquee = () => {
       </div>
 
       {/* Row 2 - Right to Left */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden z-20">
         <Marquee speed={30} direction="right" pauseOnHover>
           {secondRow.map((cert, idx) => (
             <div
               key={`cert-2-${idx}`}
-              className="group mx-2 relative w-[300px] h-[210px] rounded-md overflow-hidden border shadow-md"
+              className="group mx-2 relative w-[200px] sm:w-[300px] h-[140px] sm:h-[210px] rounded-md overflow-hidden border shadow-md"
             >
               <Image
                 src={cert.src}

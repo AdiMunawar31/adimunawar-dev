@@ -1,8 +1,8 @@
 "use client";
 
-import { Github, Linkedin, Mail, Phone, Twitter, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Copy, Github, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -27,7 +27,7 @@ export function Footer() {
               <span className="text-muted-foreground">/&gt;</span>
             </div>
           </motion.div>
-          <p className="max-w-sm text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+          <p className="max-w-sm text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
             I specialize in designing and developing high-quality, scalable
             web/mobile applications that blend modern technology with
             exceptional user experience.
@@ -45,29 +45,29 @@ export function Footer() {
           <div className="flex items-center justify-center md:justify-start gap-2">
             <Mail className="h-4 w-4" />
             <span className="font-medium">adimunawar.dev@gmail.com</span>
-            <Copy className="h-4 w-4 text-muted-foreground cursor-pointer hover:text-black dark:hover:text-white transition-colors" />
+            <Copy className="h-4 w-4 text-neutral-600 dark:text-neutral-300 cursor-pointer  hover:text-black dark:hover:text-white transition-colors" />
           </div>
           <div className="flex items-center justify-center md:justify-start gap-2">
             <Phone className="h-4 w-4" />
             <span className="font-medium">+62-81563754507</span>
-            <Copy className="h-4 w-4 text-muted-foreground cursor-pointer hover:text-black dark:hover:text-white transition-colors" />
+            <Copy className="h-4 w-4 text-neutral-600 dark:text-neutral-300 cursor-pointer hover:text-black dark:hover:text-white transition-colors" />
           </div>
         </div>
 
         {/* Column 3 - Social */}
-        <div className="space-y-4 text-center md:text-left">
+        <div className="space-y-4 text-center md:text-left ml-0 sm:ml-8">
           <h4 className="text-lg font-semibold text-black dark:text-white">
             Follow Me
           </h4>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">
+          <p className="text-neutral-600 dark:text-neutral-300 text-sm">
             Stay connected through my social channels for updates, insights, and
             tech-related content.
           </p>
           <div className="flex justify-center md:justify-start gap-5">
             {[
               { icon: Github, href: "#" },
-              { icon: Twitter, href: "#" },
               { icon: Linkedin, href: "#" },
+              { icon: Instagram, href: "#" },
             ].map(({ icon: Icon, href }, idx) => (
               <motion.a
                 key={idx}

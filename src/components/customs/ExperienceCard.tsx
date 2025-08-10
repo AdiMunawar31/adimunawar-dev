@@ -25,8 +25,8 @@ const cardVariants = (direction: "left" | "right"): Variants => ({
     scale: 1,
     transition: {
       type: "spring",
-      stiffness: 100,
-      damping: 15,
+      stiffness: 150,
+      damping: 50,
     },
   },
   hover: {
@@ -68,7 +68,7 @@ export const ExperienceCard = ({
             Client:
           </span>{" "}
           <span
-            className="text-neutral-700"
+            className="text-neutral-700 dark:text-neutral-300"
             style={{ fontFamily: "var(--font-open-sans)" }}
           >
             {client}
@@ -78,7 +78,7 @@ export const ExperienceCard = ({
         <p>
           <span className="font-medium text-black dark:text-white">Role:</span>{" "}
           <span
-            className="text-neutral-700"
+            className="text-neutral-700 dark:text-neutral-300"
             style={{ fontFamily: "var(--font-open-sans)" }}
           >
             {role}
@@ -90,7 +90,7 @@ export const ExperienceCard = ({
             Description:
           </span>{" "}
           <span
-            className="text-neutral-700"
+            className="text-neutral-700 dark:text-neutral-300"
             style={{ fontFamily: "var(--font-open-sans)" }}
           >
             {description}

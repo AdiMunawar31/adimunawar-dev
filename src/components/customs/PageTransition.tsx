@@ -9,14 +9,14 @@ export default function PageTransition({ onFinish }: { onFinish: () => void }) {
   useEffect(() => {
     let current = 0;
     const interval = setInterval(() => {
-      current += 1;
+      current += 2;
       if (current >= 100) {
         current = 100;
         clearInterval(interval);
         setTimeout(() => {
           setIsDone(true);
-          setTimeout(() => onFinish(), 800);
-        }, 300);
+          setTimeout(() => onFinish(), 500);
+        }, 100);
       }
       setProgress(current);
     }, 20);
@@ -29,7 +29,7 @@ export default function PageTransition({ onFinish }: { onFinish: () => void }) {
         <motion.div
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 bg-white text-black dark:bg-black dark:text-white flex flex-col items-center justify-center z-[9999]"
         >
           {/* Nama di tengah */}

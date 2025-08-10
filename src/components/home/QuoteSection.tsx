@@ -6,7 +6,7 @@ import Section from "../layouts/Section";
 
 export function QuoteSection() {
   return (
-    <Section>
+    <Section background="grid">
       <div className="container mx-auto px-6 text-center mb-8">
         {/* Title */}
         <motion.h2
@@ -25,7 +25,7 @@ export function QuoteSection() {
           whileInView={{ width: "5rem", opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="h-[3px] bg-blue-500 mx-auto mt-3 rounded-full"
+          className="h-[3px] bg-neutral-500 mx-auto mt-3 rounded-full"
         />
 
         {/* Quote Text */}
@@ -34,7 +34,7 @@ export function QuoteSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
-          className="italic max-w-3xl mx-auto mt-8 text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-300"
+          className="italic max-w-3xl mx-auto mt-8 text-lg md:text-xl leading-relaxed text-neutral-600 dark:text-neutral-300"
         >
           {` "Great design is not just about aesthetics, but about creating an
           experience that resonates with people’s emotions, inspires action, and

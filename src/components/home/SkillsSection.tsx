@@ -21,7 +21,7 @@ const itemVariants: Variants = {
     y: 0,
     transition: {
       type: "spring" as const,
-      stiffness: 150,
+      stiffness: 100,
       damping: 15,
     },
   },
@@ -29,7 +29,7 @@ const itemVariants: Variants = {
 
 export default function SkillsSection() {
   return (
-    <Section>
+    <Section background="subtleGrid">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: 40 }}
@@ -54,7 +54,7 @@ export default function SkillsSection() {
               whileInView={{ width: "5rem", opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
-              className="h-[3px] bg-blue-500 mx-auto mt-3 rounded-full"
+              className="h-[3px] bg-neutral-500 mx-auto mt-3 rounded-full"
             />
           </div>
         </div>

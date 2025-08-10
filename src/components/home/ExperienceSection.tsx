@@ -17,9 +17,9 @@ const containerVariants = {
 
 export const ExperienceSection = () => {
   return (
-    <Section background="muted">
+    <Section background="grid">
       <motion.div
-        className="text-center mb-12"
+        className="text-center mb-12 relative z-20"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -42,7 +42,7 @@ export const ExperienceSection = () => {
           whileInView={{ width: "5rem", opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="h-[3px] bg-blue-500 mx-auto mt-3 rounded-full"
+          className="h-[3px] bg-neutral-500 mx-auto mt-3 rounded-full"
         />
         <p className="text-center text-muted-foreground mb-12 mt-8">
           Here’s a quick summary of my most recent projects:
