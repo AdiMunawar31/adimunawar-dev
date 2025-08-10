@@ -1,8 +1,6 @@
-"use client";
-
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, PanInfo } from "framer-motion";
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function FloatingWhatsAppButton() {
   const controls = useAnimation();
@@ -10,12 +8,19 @@ export default function FloatingWhatsAppButton() {
   const dragStartRef = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleDragStart = (_: any, info: any) => {
+  // Ganti React.PointerEvent jadi DOM native events sesuai error:
+  const handleDragStart = (
+    event: PointerEvent | MouseEvent | TouchEvent,
+    info: PanInfo
+  ) => {
     dragStartRef.current = { x: info.point.x, y: info.point.y };
     setDragging(false);
   };
 
-  const handleDrag = (_: any, info: any) => {
+  const handleDrag = (
+    event: PointerEvent | MouseEvent | TouchEvent,
+    info: PanInfo
+  ) => {
     const distanceX = Math.abs(info.point.x - dragStartRef.current.x);
     const distanceY = Math.abs(info.point.y - dragStartRef.current.y);
     if (distanceX > 5 || distanceY > 5) {
@@ -36,10 +41,7 @@ export default function FloatingWhatsAppButton() {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="fixed inset-0 pointer-events-none z-50" // full layar untuk constraint
-    >
+    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-50">
       <motion.a
         href="https://wa.me/6281563754507"
         target="_blank"
@@ -47,7 +49,7 @@ export default function FloatingWhatsAppButton() {
         onClick={handleClick}
         drag
         dragElastic={0.2}
-        dragConstraints={containerRef} // batas drag seluruh layar
+        dragConstraints={containerRef}
         onDragStart={handleDragStart}
         onDrag={handleDrag}
         onDragEnd={handleDragEnd}
