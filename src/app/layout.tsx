@@ -3,12 +3,12 @@ import "./globals.css";
 import ClientLayout from "@/components/layouts/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "D2Y Dev | Portfolio",
-  description: "Fullstack Developer Portfolio by D2Y",
+  title: "Adi Munawar | Portfolio",
+  description: "Fullstack Developer Portfolio by Adi Munawar",
   openGraph: {
-    title: "MyApp",
-    description: "Best Next.js Boilerplate",
-    url: "https://myapp.com",
+    title: "Adi Munawar | Portfolio",
+    description: "Fullstack Developer Portfolio by Adi Munawar",
+    url: "https://adimunawar-dev.vercel.app/",
     siteName: "MyApp",
     locale: "en_US",
     type: "website",
