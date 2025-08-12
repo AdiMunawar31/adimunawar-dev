@@ -116,8 +116,9 @@ export default function ProjectsPage() {
                 No projects found.
               </h2>
               <p className="text-gray-500 text-sm mt-4">
-                This is where your projects will be displayed. When you're
-                ready,
+                {
+                  "This is where your projects will be displayed. When you're ready,"
+                }
               </p>
               <p className="text-gray-500 text-sm">
                 you can add them to showcase your skills and accomplishments.
