@@ -65,9 +65,12 @@ export function Footer() {
           </p>
           <div className="flex justify-center md:justify-start gap-5">
             {[
-              { icon: Github, href: "#" },
-              { icon: Linkedin, href: "#" },
-              { icon: Instagram, href: "#" },
+              { icon: Github, href: "https://github.com/AdiMunawar31" },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/adi-munawar-2359601b2/",
+              },
+              { icon: Instagram, href: "https://www.instagram.com/d2y_dev" },
             ].map(({ icon: Icon, href }, idx) => (
               <motion.a
                 key={idx}

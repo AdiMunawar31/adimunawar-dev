@@ -1,6 +1,6 @@
 "use client";
 
-import { experiences } from "@/lib/data/experiences";
+import { projects } from "@/lib/data/experiences";
 import { motion } from "framer-motion";
 import { ExperienceCard } from "../customs/ExperienceCard";
 import Section from "../layouts/Section";
@@ -52,8 +52,8 @@ export const ExperienceSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={containerVariants}
         >
-          {experiences.map((exp, idx) => (
-            <ExperienceCard key={idx} {...exp} index={idx} />
+          {projects.map((project, idx) => (
+            <ExperienceCard key={idx} {...project} index={idx} />
           ))}
         </motion.div>
       </motion.div>
